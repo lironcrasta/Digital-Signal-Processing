@@ -1,0 +1,11 @@
+close all;
+clear all;
+clc;
+x=input('Enter the input sequence:');
+[Rxx,lag]=xcorr(x);
+disp('Auto correlated sequence, Rxx:');
+disp(Rxx);
+stem(lag,Rxx);
+xlabel('Time');
+ylabel('Magnitude');
+title('Auto-correlation of the given sequence:');
